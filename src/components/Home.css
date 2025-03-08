@@ -1,0 +1,66 @@
+.terminal {
+  background-color: #494b5a;
+  border-radius: 8px;
+  width: 800px;
+  margin: 20px auto;
+  font-family: monospace;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terminal-header {
+  background-color: #383a47;
+  padding: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background-color: #ff5f56;
+}
+
+.dot-yellow {
+  background-color: #ffbd2e;
+}
+
+.dot-green {
+  background-color: #27c93f;
+}
+
+.terminal-content {
+  padding: 20px;
+  color: white;
+}
+
+.command-line {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.prompt {
+  color: white;
+  margin-right: 8px;
+}
+
+.output {
+  color: #ffd700;
+}
+
+.output a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.output a:hover {
+  text-decoration: underline;
+} 
