@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import './Resume.css';
 
 const Resume: React.FC = () => {
@@ -15,7 +16,7 @@ const Resume: React.FC = () => {
           Sou Analista de Qualidade, com experiência em testes de software no setor financeiro englobando fluxos de pagamentos, como Boleto, CNAB e entre outros.
         </p>
         <p className="sub-description">
-          Confira meus <a href="#projects" className="link">projetos</a> abaixo.
+          Confira meus <Link to="projects" smooth={true} duration={500} className="link">projetos</Link> abaixo.
         </p>
       </div>
     </div>
