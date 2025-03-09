@@ -52,6 +52,24 @@
   margin-right: 8px;
 }
 
+.prompt-animation {
+  color: white;
+  margin-right: 8px;
+  animation: blink 1s infinite; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
 .output {
   color: #ffd700;
 }

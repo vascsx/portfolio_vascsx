@@ -42,10 +42,10 @@ const Home: React.FC = () => {
         </div>
         <div className="command-line">
           <span className="prompt">&gt; Vasc.skills</span>
-          <span className="output">["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes"]</span>
+          <span className="output">["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Cypress"]</span>
         </div>
         <div className="command-line">
-          <span className="prompt">&gt;</span>
+          <span className="prompt-animation">&gt;</span>
         </div>
       </div>
     </div>
