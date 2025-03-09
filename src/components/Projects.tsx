@@ -13,30 +13,30 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "GLC Solutions",
+    title: "Portfolio Vasc",
     image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
-    sourceCode: "https://github.com/username/glc-tests"
+    sourceCode: "https://github.com/username/vascsx"
   },
   {
     id: 2,
-    title: "GLC Solutions",
+    title: "Login",
     image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
-    sourceCode: "https://github.com/username/glc-tests"
+    sourceCode: "https://github.com/username/vascsx"
   },
   {
     id: 3,
-    title: "GLC Solutions",
+    title: "API Rest",
     image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
-    sourceCode: "https://github.com/username/glc-tests"
+    sourceCode: "https://github.com/username/vascsx"
   }
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="project-card">
+    <div className="project-card" id='projects' >
       <div className="project-image">
         <img src={project.image} alt={project.title} />
         <div className="project-overlay">
