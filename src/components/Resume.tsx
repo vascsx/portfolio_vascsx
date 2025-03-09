@@ -12,7 +12,7 @@ const Resume: React.FC = () => {
       </div>
       <div className="resume-content">
         <p className="description">
-          Sou Analista de Qualidade, teste teste
+          Sou Analista de Qualidade, com experiência em testes de software no setor financeiro englobando fluxos de pagamentos, como Boleto, CNAB e entre outros.
         </p>
         <p className="sub-description">
           Confira meus <a href="#projects" className="link">side-projects</a> abaixo.

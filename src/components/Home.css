@@ -55,7 +55,7 @@
 .prompt-animation {
   color: white;
   margin-right: 8px;
-  animation: blink 1s infinite; 
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
@@ -66,7 +66,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
@@ -81,4 +81,91 @@
 
 .output a:hover {
   text-decoration: underline;
-} 
+}
+
+@media (max-width: 1200px) {
+  .terminal {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .terminal-header {
+    padding: 10px;
+  }
+
+  .dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .terminal-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    width: 95%;
+  }
+
+  .terminal-header {
+    padding: 8px;
+  }
+
+  .dots {
+    gap: 5px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .terminal-content {
+    padding: 12px;
+  }
+
+  .command-line {
+    font-size: 0.9rem;
+  }
+
+  .prompt, .output {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .terminal-header {
+    padding: 6px;
+  }
+
+  .dots {
+    gap: 4px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .terminal-content {
+    padding: 8px;
+  }
+
+  .command-line {
+    font-size: 0.85rem;
+  }
+
+  .prompt, .output {
+    font-size: 0.85rem;
+  }
+}
