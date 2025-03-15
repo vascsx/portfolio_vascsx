@@ -4,7 +4,7 @@ import './Resume.css';
 
 const Resume: React.FC = () => {
   const [text, setText] = useState('');
-  const fullText = 'Annderson Vasconcelos';
+  const fullText = 'Anderson Vasconcelos'; // Verifique se o texto está correto aqui
 
   useEffect(() => {
     let index = 0;

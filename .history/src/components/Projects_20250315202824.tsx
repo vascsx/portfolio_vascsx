@@ -26,7 +26,7 @@ const projectsData: Project[] = [
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe"
+    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe
   },
   {
     id: 3,

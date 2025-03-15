@@ -83,14 +83,26 @@
 .prompt-icon {
   color: #2180df;
 }
+.prompt {
+  color: #ffffff;
+}
 
 .cursor {
   width: 24px;
   height: 48px;
   background-color: #8b8eff;
   display: inline-block;
+  animation: blink 1s step-end infinite;
 }
 
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 .description {
   font-size: 18px;

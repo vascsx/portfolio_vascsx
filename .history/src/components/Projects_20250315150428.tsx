@@ -1,13 +1,16 @@
 import React from 'react';
 import './Projects.css';
-import { ReactComponent as GitHubIcon } from '../assets/images/github-svgrepo-com.svg';
+import portfolioImage from '../assets/images/portfolio.png'
+import { ReactComponent as GitHubIcon } from '../assets/icons/github.svg'; // Importando o ícone do GitHu
+import { ReactComponent as GitHubIcon } from '../assets/icons/github.svg'; // Importando o ícone do GitHu
 
 interface Project {
   id: number;
   title: string;
+  image: string;
   technologies: string[];
   sourceCode: string;
-  githubRepo: string;
+  githubRepo: string; // Adicionando a URL do repositório do GitHub
   videoUrl: string;
 }
 
@@ -15,26 +18,29 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Portfolio Vasc",
+    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
-    githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe"
+    githubRepo: "https://github.com/username/vascsx", // URL do repositório GitHub
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     id: 2,
     title: "Login",
+    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe"
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     id: 3,
     title: "API Rest",
+    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe"
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   }
 ];
 
@@ -58,7 +64,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Web
+            Ver Projeto
           </a>
           <a
             href={project.githubRepo}
@@ -67,6 +73,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             rel="noopener noreferrer"
           >
             <GitHubIcon className="github-icon" />
+            GitHub
           </a>
         </div>
       </div>
