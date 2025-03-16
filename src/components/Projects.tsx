@@ -32,7 +32,7 @@ const projectsData: Project[] = [
     icons: ["Github", "Web"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe",
+    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
     description: "Projeto de automação de testes para a funcionalidade de login."
   },
   {
@@ -42,7 +42,7 @@ const projectsData: Project[] = [
     icons: ["Github", "Web"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe",
+    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
     description: "Automação de testes de uma API Rest, garantindo a integridade das respostas."
   },
   {
@@ -52,12 +52,14 @@ const projectsData: Project[] = [
     icons: ["Github", "Web"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://youtu.be/YsqaNV0ft-I?si=rqnF7hSL9ZSqJpOe",
+    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
     description: "Testes automatizados para um fluxo que integra uma API e microserviços."
   }
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const embedUrl = project.videoUrl.replace('watch?v=', 'embed/');
+
   return (
       <div className="project-card" id="projects">
         <div className="project-info">
@@ -66,9 +68,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <div className="tech-stack">
             {project.technologies.map((tech) => (
                 <span key={tech} className="tech-tag">
-              {techIcons[tech]}
+                  {techIcons[tech]}
                   {tech}
-            </span>
+                </span>
             ))}
           </div>
           <div className="project-buttons">
@@ -81,7 +83,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         </div>
         <div className="project-video">
           <iframe
-              src={project.videoUrl}
+              src={embedUrl}
               title={project.title}
               frameBorder="0"
               allowFullScreen

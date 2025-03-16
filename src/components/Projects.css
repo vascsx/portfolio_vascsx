@@ -127,10 +127,9 @@
   justify-content: center;
 }
 
-
 .project-video iframe {
   width: 85%;
-  height: 355px;
+  height: 360px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -147,9 +146,14 @@
   height: 32px;
   margin-right: 0.5rem;
   color: #3d78df;
+  transition: transform 0.2s ease;
 }
 
-.tech-tag{
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.tech-tag {
   background-color: rgba(203, 193, 193, 0.91);
 }
 
@@ -163,6 +167,7 @@
   backdrop-filter: blur(4px);
   margin-bottom: 0.5rem;
 }
+
 @media (max-width: 1024px) {
   .project-card {
     flex-direction: column;
@@ -171,22 +176,31 @@
   .project-info {
     flex: 0 0 100%;
     padding: 1rem;
+    margin-left: 0;
   }
 
   .project-video {
-    height: 400px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .project-video iframe {
+    width: 100%;
+    height: 250px;
   }
 }
 
 @media (max-width: 640px) {
   .project-video {
-    height: 300px;
+    height: 250px;
   }
 
   .project-info {
     padding: 1rem;
     margin-top: 1.5rem;
   }
+
+  .project-video iframe {
+    height: 200px;
+  }
 }
-
-
