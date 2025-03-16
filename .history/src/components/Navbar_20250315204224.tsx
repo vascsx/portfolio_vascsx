@@ -3,7 +3,7 @@ import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <div className="terminal" id={"home"}>
+    <div className="terminal">
       <div className="terminal-header">
         <div className="dots">
           <div className="dot dot-red"></div>

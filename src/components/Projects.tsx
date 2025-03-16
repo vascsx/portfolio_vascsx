@@ -84,7 +84,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const Projects: React.FC = () => {
   return (
-    <section className="projects">
+    <section className="projects" id={"projects"}>
       <h2>Projetos</h2>
       <div className="projects-grid">
         {projectsData.map((project) => (

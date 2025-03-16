@@ -5,7 +5,7 @@ import './Contact.css';
 
 const Contact: React.FC = () => {
   return (
-    <div className="contact">
+    <div className="contact" id={"contact"}>
       <h2>Contatos</h2>
       <div className="icons">
         <a href="https://github.com/vascsx" target="_blank" rel="noopener noreferrer">

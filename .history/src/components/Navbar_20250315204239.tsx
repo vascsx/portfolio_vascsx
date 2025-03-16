@@ -1,9 +1,9 @@
 import React from 'react';
-import './Home.css';
+import './Navbar.css';
 
-const Home: React.FC = () => {
+const Navbar: React.FC = () => {
   return (
-    <div className="terminal" id={"home"}>
+    <div className="terminal">
       <div className="terminal-header">
         <div className="dots">
           <div className="dot dot-red"></div>

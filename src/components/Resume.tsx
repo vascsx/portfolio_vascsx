@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
 import './Resume.css';
 
 const Resume: React.FC = () => {
@@ -21,7 +20,7 @@ const Resume: React.FC = () => {
   }, []);
 
   return (
-    <div className="resume">
+    <div className="resume" id={"resume"}>
       <div className="resume-header">
         <h1 className="title">
           <span className="prompt-icon">&gt;</span>

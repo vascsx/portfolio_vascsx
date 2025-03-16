@@ -1,0 +1,170 @@
+/* Variáveis do tema */
+:root {
+    --primary-color: #3d78df; /* Cor primária */
+    --font-size-base: 1.35rem;
+    --gap: 2rem;
+    --padding-nav: 30px;
+    --background-color: #ffffff; /* Cor de fundo padrão (tema claro) */
+    --text-color: #333; /* Cor do texto padrão (tema claro) */
+}
+
+/* Definições para o modo escuro */
+[data-theme='dark'] {
+    --background-color: #0a0a0a; /* Cor de fundo para o modo escuro */
+    --text-color: #f1f1f1; /* Texto claro no modo escuro */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Estilos gerais da navegação */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    background: rgba(235, 235, 236, 0.16);
+    width: 100%;
+    padding: var(--padding-nav);
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--gap);
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: var(--font-size-base);
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    color: blue;
+}
+
+/* Suavização ao clicar */
+nav ul li a:active,
+nav ul li a:focus {
+    color: darkblue;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Botão de alternância de tema com ícones */
+.button {
+    margin-left: 50px;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 80px;
+    height: 45px;
+    border-radius: 999px;
+    background: #f3f3f3;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease; /* Suavizar a transição do fundo */
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 99px;
+    background: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
+    -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease; /* Aumento da suavização */
+}
+
+/* Mudando a posição do círculo quando o tema é alternado */
+input[type='checkbox']:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%) rotate(360deg); /* Adicionando rotação no círculo */
+    background: #2c2c2f;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+    -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Estilos para os ícones */
+.sun {
+    color: #ffd600;
+    margin-top: 0%;
+    opacity: 1;
+    width: 35px;
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Suavizando a transição de opacidade e rotação */
+}
+
+.moon {
+    margin-top: -150%;
+    color: white;
+    opacity: 0;
+    width: 35px;
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Suavizando a transição de opacidade e rotação */
+}
+
+/* Ajuste para o modo responsivo */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav ul li {
+        font-size: 1.2rem;
+    }
+}
