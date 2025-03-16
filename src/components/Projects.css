@@ -130,6 +130,24 @@
   object-fit: cover; /* Assegura que o vídeo cubra completamente a área do iframe sem distorção */
 }
 
+.tech-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  color: #3d78df; /* Cor do ícone */
+}
+
+.tech-stack .tech-tag {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  backdrop-filter: blur(4px);
+  margin-bottom: 0.5rem;
+}
 @media (max-width: 1024px) {
   .project-card {
     flex-direction: column;
@@ -155,3 +173,5 @@
     margin-top: 1.5rem;
   }
 }
+
+

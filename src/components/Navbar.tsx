@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Brightness4, Brightness7 } from '@mui/icons-material'; // Ícones de luz e escuro
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -20,7 +20,6 @@ const Navbar: React.FC = () => {
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                {/* Botão para alternar entre temas */}
                 <div className="button">
                     <input
                         type="checkbox"
@@ -31,7 +30,6 @@ const Navbar: React.FC = () => {
                     <div className="display">
                         <label htmlFor="toggle">
                             <div className={`circle ${darkMode ? 'dark' : ''}`}>
-                                {/* Ícones de alternância entre temas */}
                                 {darkMode ? <Brightness7 /> : <Brightness4 />}
                             </div>
                         </label>

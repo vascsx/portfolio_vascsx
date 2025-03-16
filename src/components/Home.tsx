@@ -1,55 +1,66 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+import "./Home.css";
+
+const userData = {
+  location: "Russas, CE",
+  contact: [
+    { name: "Email", url: "mailto:andersonvasconcelosprog@gmail.com" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/andersonvasconcelos17/" },
+    { name: "GitHub", url: "https://github.com/vascsx" },
+  ],
+  resume: "/path/to/vasc.pdf",
+  interests: ["Jogos", "Futmesa", "Programação", "Back-end"],
+  education: "Universidade Federal do Ceará - Ciência da Computação",
+  skills: ["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Cypress"],
+};
 
 const Home: React.FC = () => {
   return (
-    <div className="terminal" id={"home"}>
-      <div className="terminal-header">
-        <div className="dots">
-          <div className="dot dot-red"></div>
-          <div className="dot dot-yellow"></div>
-          <div className="dot dot-green"></div>
+      <div className="terminal" id="home">
+        <div className="terminal-header">
+          <div className="dots">
+            <span className="dot dot-red"></span>
+            <span className="dot dot-yellow"></span>
+            <span className="dot dot-green"></span>
+          </div>
+        </div>
+
+        <div className="terminal-content">
+          <CommandLine label="Vasc.currentLocation" output={userData.location} />
+
+          <CommandLine label="Vasc.contactInfo">
+            {userData.contact.map(({ name, url }, index) => (
+                <a key={index} href={url} target="_blank" rel="noopener noreferrer">"{name}"</a>
+            ))}
+          </CommandLine>
+
+          <CommandLine label="Vasc.resume">
+            <a href={userData.resume} target="_blank" rel="noopener noreferrer">"vasc.pdf"</a>
+          </CommandLine>
+
+          <CommandLine label="Vasc.interests" output={JSON.stringify(userData.interests)} />
+          <CommandLine label="Vasc.education" output={userData.education} />
+          <CommandLine label="Vasc.skills" output={JSON.stringify(userData.skills)} />
+
+          <div className="command-line">
+            <span className="prompt-animation">&gt;</span>
+          </div>
         </div>
       </div>
-      <div className="terminal-content">
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.currentLocation</span>
-          <span className="output">"Russas, CE"</span>
-        </div>
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.contactInfo</span>
-          <span className="output">
-            [
-              <a href="mailto:andersonvasconcelosprog@gmail.com">"andersonvasconcelosprog@gmail.com"</a>, 
-              <a href="https://www.linkedin.com/in/andersonvasconcelos17/" target="_blank" rel="noopener noreferrer">"LinkedIn"</a>, 
-              <a href="https://github.com/vascsx" target="_blank" rel="noopener noreferrer">"github"</a>
-            ]
-          </span>
-        </div>
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.resume</span>
-          <span className="output">
-            <a href="/path/to/vasc.pdf" target="_blank" rel="noopener noreferrer">"vasc.pdf"</a>
-          </span>
-        </div>
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.interests</span>
-          <span className="output">["Jogos", "Futmesa", "Programação", "Back-end"]</span>
-        </div>
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.education</span>
-          <span className="output">"Universidade Federal do Ceará - Ciência da Computação"</span>
-        </div>
-        <div className="command-line">
-          <span className="prompt">&gt; Vasc.skills</span>
-          <span className="output">["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Cypress"]</span>
-        </div>
-        <div className="command-line">
-          <span className="prompt-animation">&gt;</span>
-        </div>
-      </div>
-    </div>
   );
 };
+
+interface CommandLineProps {
+  label: string;
+  output?: string;
+  children?: React.ReactNode;
+}
+
+const CommandLine: React.FC<CommandLineProps> = ({ label, output, children }) => (
+    <div className="command-line">
+      <span className="prompt">&gt; {label}</span>
+      <span className="output">{output || children}</span>
+    </div>
+);
 
 export default Home;
