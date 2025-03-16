@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+📌 Anderson Vasconcelos - Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao meu portfólio! 🚀 Aqui, compartilho meu progresso na jornada de desenvolvimento de software e testes automatizados. Este projeto tem como objetivo centralizar minhas experiências, projetos e aprendizados na área de tecnologia.
 
-## Available Scripts
+📍 Sobre o Projeto
 
-In the project directory, you can run:
+Este portfólio é um espaço para demonstrar meu crescimento profissional e técnico. Ele inclui:
 
-### `npm start`
+Projetos de desenvolvimento backend e frontend;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Automação de testes com Cypress e outras ferramentas;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Estudos sobre tecnologias como Cypress,C#, SQL, MongoDB, RabbitMQ, Gitlab, Redis, ElasticSearch, Kubernetes, entre outras;
 
-### `npm test`
+Minha trajetória acadêmica e profissional.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O site conta com um design moderno e responsivo, permitindo fácil navegação para visualizar meus trabalhos e conhecer mais sobre mim.
 
-### `npm run build`
+🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend: React, TypeScript, CSS 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🚀 Como Rodar o Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone este repositório:
 
-### `npm run eject`
+git clone https://github.com/vascsx/portfolio.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Acesse a pasta do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd portfolio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instale as dependências:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+pnpm install
 
-## Learn More
+Inicie o servidor de desenvolvimento:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+pnpm dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Acesse no navegador: http://localhost:3000
+
+🎯 Contribuição
+
+Caso queira sugerir melhorias ou relatar problemas, fique à vontade para abrir uma issue ou enviar um pull request. Toda contribuição é bem-vinda! 🤝
+
+📞 Contato
+
+📧 E-mail: andersonvasconcelosprog@gmail.com💼 LinkedIn: linkedin.com/in/andersonvasconcelos17🐙 GitHub: github.com/vascsx
+
+💡 "A melhor maneira de aprender é construir!" 🚀
+
