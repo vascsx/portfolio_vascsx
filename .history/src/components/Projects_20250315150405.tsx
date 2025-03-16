@@ -1,11 +1,11 @@
 import React from 'react';
-import './Projects.css' '../assets/images/github-svgrepo-com.svg'; 
-import { ReactComponent as GitHubIcon } from '../assets/images/github-svgrepo-com.svg'; 
+import './Projects.css';
+// @ts-ignore
+import { ReactComponent as GitHubIcon } from '../assets/images/github.svg';
 
 interface Project {
   id: number;
   title: string;
-  image: string;
   technologies: string[];
   sourceCode: string;
   githubRepo: string; // Adicionando a URL do repositório do GitHub
@@ -16,7 +16,6 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Portfolio Vasc",
-    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx", // URL do repositório GitHub
@@ -25,7 +24,6 @@ const projectsData: Project[] = [
   {
     id: 2,
     title: "Login",
-    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",
@@ -34,7 +32,6 @@ const projectsData: Project[] = [
   {
     id: 3,
     title: "API Rest",
-    image: portfolioImage,
     technologies: ["Cypress", "TypeScript"],
     sourceCode: "https://github.com/username/vascsx",
     githubRepo: "https://github.com/username/vascsx",

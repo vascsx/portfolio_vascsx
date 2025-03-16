@@ -1,6 +1,6 @@
 import React from "react";
-import githubIcon from "../assets/images/github-svgrepo-com.svg";
-import linkedinIcon from "../assets/images/linkedin-svgrepo-com.svg";
+import githubIcon from "../assets/images/github.svg";
+import linkedinIcon from "../assets/images/linkedin.svg";
 import "./Contact.css";
 
 const socialLinks = [

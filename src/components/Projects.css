@@ -45,6 +45,7 @@
 .project-info h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  color: rgba(40, 27, 27, 0.85);
   margin-top: 1rem;
 }
 
@@ -121,29 +122,43 @@
 .project-video {
   flex: 0 0 75%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .project-video iframe {
-  width: 100%;
-  height: 350px;
+  width: 85%;
+  height: 355px;
   border-radius: 8px;
-  object-fit: cover; /* Assegura que o vídeo cubra completamente a área do iframe sem distorção */
+  object-fit: cover;
 }
 
 .tech-icon {
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
-  color: #3d78df; /* Cor do ícone */
+  color: #3d78df;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+  color: #3d78df;
+}
+
+.tech-tag{
+  background-color: rgba(203, 193, 193, 0.91);
 }
 
 .tech-stack .tech-tag {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
   color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
   font-size: 0.75rem;
   backdrop-filter: blur(4px);
   margin-bottom: 0.5rem;
