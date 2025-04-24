@@ -8,7 +8,7 @@ const userData = {
         { name: "LinkedIn", url: "https://www.linkedin.com/in/andersonvasconcelos17/" },
         { name: "GitHub", url: "https://github.com/vascsx" },
     ],
-    resume: "/path/to/vasc.pdf",
+    resume: "/archives/anderson_vasconcelos.pdf",
     interests: ["Jogos", "Futmesa", "Programação", "Back-end"],
     education: "Universidade Federal do Ceará - Ciência da Computação",
     skills: ["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Cypress"],
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                 </CommandLine>
 
                 <CommandLine label="Vasc.resume">
-                    <a href={userData.resume} target="_blank" rel="noopener noreferrer">vasc.pdf</a>
+                    <a href={userData.resume} target="_blank" rel="noopener noreferrer">anderson_vasconcelos.pdf</a>
                 </CommandLine>
 
                 <CommandLine label="Vasc.interests" output={JSON.stringify(userData.interests)} />

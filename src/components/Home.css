@@ -2,9 +2,12 @@
   background-color: #494b5a;
   border-radius: 8px;
   width: 900px;
+  max-width: 95%;
   margin: 20px auto;
   font-family: monospace;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .terminal-header {
@@ -25,49 +28,40 @@
   border-radius: 50%;
 }
 
-.dot-red {
-  background-color: #ff5f56;
-}
-
-.dot-yellow {
-  background-color: #ffbd2e;
-}
-
-.dot-green {
-  background-color: #27c93f;
-}
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
 
 .terminal-content {
   padding: 20px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .command-line {
-  margin-bottom: 16px;
   line-height: 1.5;
 }
 
-.prompt {
+.prompt, .prompt-animation {
   color: white;
   margin-right: 8px;
 }
 
 .prompt-animation {
-  color: white;
-  margin-right: 8px;
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .output {
@@ -83,18 +77,36 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1200px) {
+.video-section {
+  margin-top: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 1024px) {
   .terminal {
-    width: 90%;
-    margin: 20px auto;
+    width: 95%;
+    padding: 0 10px;
   }
 
-  .terminal-header {
-    padding: 10px;
-  }
-
-  .dots {
-    gap: 6px;
+  .terminal-content {
+    padding: 16px;
   }
 
   .dot {
@@ -102,70 +114,55 @@
     height: 10px;
   }
 
-  .terminal-content {
-    padding: 16px;
+  .output {
+    font-size: 0.55rem;
   }
+ 
 }
 
 @media (max-width: 768px) {
-  .terminal {
-    width: 95%;
+  .terminal-content {
+    padding: 14px;
   }
 
-  .terminal-header {
-    padding: 8px;
-  }
-
-  .dots {
-    gap: 5px;
+  .video-section {
+    margin-top: 16px;
   }
 
   .dot {
     width: 8px;
     height: 8px;
   }
-
-  .terminal-content {
-    padding: 12px;
-  }
-
-  .command-line {
-    font-size: 0.9rem;
-  }
-
-  .prompt, .output {
-    font-size: 0.9rem;
-  }
+  
 }
 
 @media (max-width: 480px) {
-  .terminal {
-    width: 100%;
-    margin: 10px auto;
+  .terminal-content {
+    padding: 10px;
   }
 
-  .terminal-header {
-    padding: 6px;
+  .text-section {
+    text-align: center;
+    gap: 8px;
   }
 
-  .dots {
+  .command-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 4px;
+  }
+
+  .output {
+    font-size: 0.7rem;
+  }
+
+  .video-section {
+    margin-top: 12px;
   }
 
   .dot {
     width: 6px;
     height: 6px;
-  }
-
-  .terminal-content {
-    padding: 8px;
-  }
-
-  .command-line {
-    font-size: 0.85rem;
-  }
-
-  .prompt, .output {
-    font-size: 0.85rem;
   }
 }
