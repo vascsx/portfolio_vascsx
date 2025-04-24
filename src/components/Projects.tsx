@@ -1,109 +1,97 @@
 import React from 'react';
 import './Projects.css';
-import { SiCypress, SiTypescript, SiGitlab, SiGithub, SiGooglechrome  } from 'react-icons/si';
+import { FaVideo, FaBlog } from 'react-icons/fa';
+
+
+import apiswaagerImage from '../assets/images/apiswaager.png';
+
 
 interface Project {
-  id: number;
-  title: string;
-  description: string;
-  icons: string[];
-  technologies: string[];
-  sourceCode: string;
-  githubRepo: string;
-  videoUrl: string;
+    id: number;
+    image: string;
+    date: string;
+    title: string;
+    description: string;
+    tags: string[];
+    videoLink: string;
+    blogLink: string;
 }
 
-const techIcons: { [key: string]: React.ReactNode } = {
-  Cypress: SiCypress({ className: "tech-icon" }),
-  TypeScript: SiTypescript({ className: "tech-icon" }),
-  GitLab: SiGitlab({ className: "tech-icon" }),
-};
-
-const socialIcons: { [key: string]: React.ReactNode } = {
-  Web: SiGithub({ className: "social-icon" }),
-  Github: SiGooglechrome({ className: "social-icon" }),
-};
-
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "Automação de Testes - Login",
-    technologies: ["Cypress", "TypeScript"],
-    icons: ["Github", "Web"],
-    sourceCode: "https://github.com/username/vascsx",
-    githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
-    description: "Projeto de automação de testes para a funcionalidade de login."
-  },
-  {
-    id: 2,
-    title: "Automação de Testes - API Rest",
-    technologies: ["Cypress", "TypeScript"],
-    icons: ["Github", "Web"],
-    sourceCode: "https://github.com/username/vascsx",
-    githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
-    description: "Automação de testes de uma API Rest, garantindo a integridade das respostas."
-  },
-  {
-    id: 3,
-    title: "Automação de Testes - Fluxo com API e Microserviço",
-    technologies: ["Cypress", "TypeScript"],
-    icons: ["Github", "Web"],
-    sourceCode: "https://github.com/username/vascsx",
-    githubRepo: "https://github.com/username/vascsx",
-    videoUrl: "https://www.youtube.com/watch?v=yJg-Y5byMMw",
-    description: "Testes automatizados para um fluxo que integra uma API e microserviços."
-  }
+const projects: Project[] = [
+    {
+        id: 1,
+        image: apiswaagerImage,
+        date: 'Sábado, 23 abril 2025',
+        title: 'Automação de API utilizando Robot Framework',
+        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
+        tags: ['Robot Framework', '.NET', 'Docker'],
+        videoLink: 'https://link-to-video.com',
+        blogLink: 'https://link-to-blog.com',
+    },
+    {
+        id: 2,
+        image: apiswaagerImage,
+        date: 'Sábado, 23 abril 2025',
+        title: 'Automação de API utilizando Robot Framework',
+        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
+        tags: ['Robot Framework', '.NET', 'Docker'],
+        videoLink: 'https://link-to-video.com',
+        blogLink: 'https://link-to-blog.com',
+    },
+    {
+        id: 3,
+        image: apiswaagerImage,
+        date: 'Sábado, 23 abril 2025',
+        title: 'Automação de API utilizando Robot Framework',
+        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
+        tags: ['Robot Framework', '.NET', 'Docker'],
+        videoLink: 'https://link-to-video.com',
+        blogLink: 'https://link-to-blog.com',
+    },
 ];
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const embedUrl = project.videoUrl.replace('watch?v=', 'embed/');
-
-  return (
-      <div className="project-card" id="projects">
-        <div className="project-info">
-          <h3>{project.title}</h3>
-          <p>{project.description}</p> {/* Exibindo a descrição dinamicamente */}
-          <div className="tech-stack">
-            {project.technologies.map((tech) => (
-                <span key={tech} className="tech-tag">
-                  {techIcons[tech]}
-                  {tech}
-                </span>
-            ))}
-          </div>
-          <div className="project-buttons">
-            {project.icons.map((icon) => (
-                <a key={icon} href={project.sourceCode} target="_blank" rel="noopener noreferrer">
-                  {socialIcons[icon]}
-                </a>
-            ))}
-          </div>
-        </div>
-        <div className="project-video">
-          <iframe
-              src={embedUrl}
-              title={project.title}
-              frameBorder="0"
-              allowFullScreen
-          ></iframe>
-        </div>
-      </div>
-  );
-};
-
 const Projects: React.FC = () => {
-  return (
-      <section className="projects" id={"projects"}>
-        <h2>Projetos</h2>
-        <div className="projects-grid">
-          {projectsData.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-          ))}
+    return (
+        <div className="projects-container">
+            <header className="projects-header">
+                <h2>Projetos</h2>
+            </header>
+            <section className="recent-projects">
+                <h2>Projetos recentes</h2>
+                <div className="projects-grid">
+                    {projects.map((project) => (
+                        <div className="project-card" key={project.id}>
+                            <img src={project.image} alt={project.title} />
+                            <div className="project-content">
+                                <p className="project-date">{project.date}</p>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                <div className="tags">
+                                    {project.tags.map((tag, index) => (
+                                        <span className="tag" key={index}>{tag}</span>
+                                    ))}
+                                </div>
+                                <div className="buttons">
+                                    <button
+                                        className="video-button"
+                                        onClick={() => window.open(project.videoLink, '_blank')}
+                                    >
+                                        <span><FaVideo /></span> Vídeo do Projeto
+                                    </button>
+                                    <button
+                                        className="blog-button"
+                                        onClick={() => window.open(project.blogLink, '_blank')}
+                                    >
+                                        <span><FaBlog /></span> Link do Blog
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
-      </section>
-  );
+    );
 };
 
 export default Projects;
