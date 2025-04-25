@@ -15,9 +15,9 @@ const Navbar: React.FC = () => {
           <a href="https://www.linkedin.com/in/andersonvasconcelos17" target='blank'>Vasc</a>
         </div>
         <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
-          <li><a href="#resume">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Contact</a></li>
         </ul>
         <div className="navbar-toggle" onClick={toggleMobileMenu}>
           <span className="bar"></span>
