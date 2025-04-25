@@ -52,7 +52,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
     return (
-        <div className="projects-container">
+        <div className="projects-container" id ="projects">
             <header className="projects-header">
                 <h2>Projetos</h2>
             </header>
