@@ -1,7 +1,6 @@
 .projects-container {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-color: #eaeaeb;
     padding: 20px;
 }
 
@@ -13,11 +12,11 @@
 .projects-header h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #aeaebe;
+    color: #a4a2a2;
 
 }
 
-.recent-projects h2 {
+.projects h2 {
     font-size: 1.95rem;
     margin-bottom: 20px;
     color: #1c1cf3;

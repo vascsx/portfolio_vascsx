@@ -56,8 +56,7 @@ const Projects: React.FC = () => {
             <header className="projects-header">
                 <h2>Projetos</h2>
             </header>
-            <section className="recent-projects">
-                <h2>Projetos recentes</h2>
+            <section className="projects">
                 <div className="projects-grid">
                     {projects.map((project) => (
                         <div className="project-card" key={project.id}>
