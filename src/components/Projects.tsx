@@ -1,61 +1,25 @@
 import React from 'react';
-import './Projects.css';
 import { FaVideo, FaBlog } from 'react-icons/fa';
-
-
-import apiswaagerImage from '../assets/images/apiswaager.png';
-
-
-interface Project {
-    id: number;
-    image: string;
-    date: string;
-    title: string;
-    description: string;
-    tags: string[];
-    videoLink: string;
-    blogLink: string;
-}
-
-const projects: Project[] = [
-    {
-        id: 1,
-        image: apiswaagerImage,
-        date: 'Sábado, 23 abril 2025',
-        title: 'Automação de API utilizando Robot Framework',
-        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
-        tags: ['Robot Framework', '.NET', 'Docker'],
-        videoLink: 'https://link-to-video.com',
-        blogLink: 'https://link-to-blog.com',
-    },
-    {
-        id: 2,
-        image: apiswaagerImage,
-        date: 'Sábado, 23 abril 2025',
-        title: 'Automação de API utilizando Robot Framework',
-        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
-        tags: ['Robot Framework', '.NET', 'Docker'],
-        videoLink: 'https://link-to-video.com',
-        blogLink: 'https://link-to-blog.com',
-    },
-    {
-        id: 3,
-        image: apiswaagerImage,
-        date: 'Sábado, 23 abril 2025',
-        title: 'Automação de API utilizando Robot Framework',
-        description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
-        tags: ['Robot Framework', '.NET', 'Docker'],
-        videoLink: 'https://link-to-video.com',
-        blogLink: 'https://link-to-blog.com',
-    },
-];
+import './Projects.css';
 
 const Projects: React.FC = () => {
+    const projects = [
+        {
+            id: 1,
+            image: 'path/to/image1.jpg',
+            date: 'Sábado, 23 abril 2025',
+            title: 'Automação de API utilizando Robot Framework',
+            description: 'Projeto de automação de API utilizando Robot Framework, com integração contínua e testes automatizados.',
+            tags: ['Robot Framework', '.NET', 'Docker'],
+            videoLink: 'https://link-to-video.com',
+            blogLink: 'https://link-to-blog.com',
+        },
+    ];
+
     return (
-        <div className="projects-container" id ="projects">
+        <div className="projects-container" id="projects">
             <h2>Projetos</h2>
-            <header className="projects-header">
-            </header>
+            <header className="projects-header"></header>
             <section className="projects">
                 <div className="projects-grid">
                     {projects.map((project) => (
@@ -75,13 +39,13 @@ const Projects: React.FC = () => {
                                         className="video-button"
                                         onClick={() => window.open(project.videoLink, '_blank')}
                                     >
-                                        <span><FaVideo /></span> Vídeo do Projeto
+                                        <span>{<FaVideo />}</span> Vídeo do Projeto
                                     </button>
                                     <button
                                         className="blog-button"
                                         onClick={() => window.open(project.blogLink, '_blank')}
                                     >
-                                        <span><FaBlog /></span> Link do Blog
+                                        <span>{<FaBlog />}</span> Link do Blog
                                     </button>
                                 </div>
                             </div>
