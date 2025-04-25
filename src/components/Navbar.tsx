@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a href="#home">Vasc</a>
+          <a href="https://www.linkedin.com/in/andersonvasconcelos17" target='blank'>Vasc</a>
         </div>
         <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <li><a href="#resume">Home</a></li>
