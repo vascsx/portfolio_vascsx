@@ -8,13 +8,19 @@ const socialLinks = [
     { href: "https://www.linkedin.com/in/andersonvasconcelos17", icon: linkedinIcon, alt: "LinkedIn" },
 ];
 
-const Contact: React.FC = () => {
+const Contact: React.FC = React.memo(() => {
     return (
         <section className="contact" id="contact">
             <h2>Contatos</h2>
             <div className="icons">
-                {socialLinks.map(({ href, icon, alt }, index) => (
-                    <a key={index} href={href} target="_blank" rel="noopener noreferrer">
+                {socialLinks.map(({ href, icon, alt }) => (
+                    <a
+                        key={href}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Link para ${alt}`}
+                    >
                         <img src={icon} alt={`Ícone do ${alt}`} className="icon" />
                     </a>
                 ))}
@@ -24,6 +30,6 @@ const Contact: React.FC = () => {
             </footer>
         </section>
     );
-};
+});
 
 export default Contact;

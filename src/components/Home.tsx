@@ -9,9 +9,9 @@ const userData = {
         { name: "GitHub", url: "https://github.com/vascsx" },
     ],
     resume: "/archives/anderson_vasconcelos.pdf",
-    interests: ["Jogos", "Futmesa", "Programação", "Back-end"],
+    interests: ["Jogos", "Futmesa", "Cloud", "Back-end"],
     education: "Universidade Federal do Ceará - Ciência da Computação",
-    skills: ["C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Cypress"],
+    skills: ["Selenium","Robot","C#", "SQL", "MongoDB", "RabbitMQ", "Redis", "ElasticSearch", "Kubernetes", "Docker","AWS"],
 };
 
 const Home: React.FC = () => {

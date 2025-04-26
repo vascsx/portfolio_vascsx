@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
                       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2z" />
                       <path d="M2.5 3.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM4 4h8v1H4V4zm0 2h8v1H4V6zm0 2h8v1H4V8z" />
                     </svg>
-                    Link do Blog
+                    Sobre o Projeto
                   </button>
                 </div>
               </div>
